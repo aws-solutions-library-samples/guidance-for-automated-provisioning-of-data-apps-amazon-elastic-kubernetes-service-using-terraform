@@ -1,0 +1,16 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 4rem 0;
+  width: 100%;
+  /*background: lightgray;*/
+}
+
+.featureSvg {
+  height: 250px;
+  width: 250px;
+}
+
+.heading {
+  font-weight: bold;
+}
