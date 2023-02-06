@@ -2,8 +2,7 @@ module "eks_blueprints_kubernetes_addons" {
   #source = "github.com/aws-ia/terraform-aws-eks-blueprints//modules/kubernetes-addons?ref=v4.19.0"
   #DZ: need to change reference to the main EKS Blueprint repo to github.com/aws-solutions-library-samples/guidance-for-automated-provisioning-of-amazon-elastic-kubernetes-service-using-terraform
   #need to be double checked
-  source = "https://github.com/aws-solutions-library-samples/guidance-for-automated-provisioning-of-amazon-elastic-kubernetes-service-using-terraform//modules/kubernetes-addons?ref=v4.19.0"
-  
+  source = "git::https://dzilbermanvmw@github.com/aws-solutions-library-samples/guidance-for-automated-provisioning-of-amazon-elastic-kubernetes-service-using-terraform.git//modules/kubernetes-addons" 
   eks_cluster_id       = module.eks_blueprints.eks_cluster_id
   eks_cluster_endpoint = module.eks_blueprints.eks_cluster_endpoint
   eks_oidc_provider    = module.eks_blueprints.oidc_provider

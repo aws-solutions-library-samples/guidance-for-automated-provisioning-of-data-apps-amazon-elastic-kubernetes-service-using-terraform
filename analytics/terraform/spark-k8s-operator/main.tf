@@ -2,8 +2,8 @@
 # EKS Blueprints
 #---------------------------------------------------------------
 module "eks_blueprints" {
-  source = "https://github.com/aws-solutions-library-samples/guidance-for-automated-provisioning-of-amazon-elastic-kubernetes-service-using-terraform?ref=v4.19.0"
-
+  source = "git::https://dzilbermanvmw@github.com/aws-solutions-library-samples/guidance-for-automated-provisioning-of-amazon-elastic-kubernetes-service-using-terraform.git"
+  # source = "github.com/aws-ia/terraform-aws-eks-blueprints?ref=v4.19.0"
   cluster_name    = local.name
   cluster_version = var.eks_cluster_version
 
