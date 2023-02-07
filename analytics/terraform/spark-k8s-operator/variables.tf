@@ -7,7 +7,8 @@ variable "name" {
 variable "region" {
   description = "region"
   type        = string
-  default     = "us-west-2"
+  # DZ: change to us-east-2 has more resources
+  default     = "us-east-2"
 }
 
 variable "eks_cluster_version" {
