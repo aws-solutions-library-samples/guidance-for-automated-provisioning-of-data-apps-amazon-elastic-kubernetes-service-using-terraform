@@ -1,0 +1,33 @@
+# DZ: this is a file that should be executed in case if TF blueprint based provisioning fails to create serviceaccount, role and rolebinding
+# for running spark applications in the sprak-team-a namespace 
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: spark-team-a
+  namespace: spark-team-a
+automountServiceAccountToken: true
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: spark-pi-role
+  namespace: spark-team-a
+rules:
+- apiGroups: [""]
+  resources: ["pods", "services", "configmaps"]
+  verbs: ["get", "list", "watch", "create", "delete", "update", "patch"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: spark-pi-role-binding
+  namespace: spark-team-a
+subjects:
+- kind: ServiceAccount
+  name: spark-team-a
+  namespace: spark-team-a
+roleRef:
+  kind: Role
+  name: spark-pi-role
+  apiGroup: rbac.authorization.k8s.io

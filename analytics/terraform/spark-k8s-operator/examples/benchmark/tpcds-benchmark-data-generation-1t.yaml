@@ -1,6 +1,6 @@
 # NOTE: This example requires the following prerequisites before executing the jobs
 # 1. Ensure "spark-team-a" namespace exists
-# 2. replace <ENTER_YOUR_BUCKET> with your bucket name
+# 2. replace <ENTER_YOUR_BUCKET> with your bucket name: spark-test-bucket-dz
 
 apiVersion: "sparkoperator.k8s.io/v1beta2"
 kind: SparkApplication
@@ -22,7 +22,7 @@ spec:
   batchScheduler: "yunikorn"
   arguments:
     # TPC-DS data location
-    - "s3://<ENTER_YOUR_BUCKET_NAME>/TPCDS-TEST-1G"
+    - "s3://spark-test-bucket-dz/TPCDS-TEST-1G"
     # Path to kit in the docker image
     - "/opt/tpcds-kit/tools"
     # Data Format
