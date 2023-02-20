@@ -2,7 +2,7 @@
 # EKS Blueprints
 #---------------------------------------------------------------
 module "eks_blueprints" {
-  source = "git::https://dzilbermanvmw@github.com/aws-solutions-library-samples/guidance-for-automated-provisioning-of-amazon-elastic-kubernetes-service-using-terraform.git"
+  source = "git::https://aws-solutions-library-samples/guidance-for-automated-provisioning-of-amazon-elastic-kubernetes-service-using-terraform.git"
   # source = "github.com/aws-ia/terraform-aws-eks-blueprints?ref=v4.19.0"
   # cluster_name    = local.name
   # DZ: for unique roles that will be created base on cluster name
