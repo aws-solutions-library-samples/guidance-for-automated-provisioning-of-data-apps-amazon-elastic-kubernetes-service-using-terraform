@@ -3,8 +3,8 @@
 #---------------------------------------------------------------
 module "eks_blueprints" {
   # source = "github.com/aws-ia/terraform-aws-eks-blueprints?ref=v4.18.1"
-  # source reference changed to the AWS samples Library repo that should be publicly available:
-  source = "https://github.com/aws-solutions-library-samples/guidance-for-automated-provisioning-of-data-apps-amazon-elastic-kubernetes-service-using-terraform"
+  # source reference changed to the AWS Samples Library EKS blueprints repo that should be publicly available:
+  source = "https://github.com/aws-solutions-library-samples/guidance-for-automated-provisioning-of-amazon-elastic-kubernetes-service-using-terraform"
 
 
   cluster_name    = local.name
