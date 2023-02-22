@@ -3,12 +3,12 @@
 #---------------------------------------------------------------
 module "eks_blueprints" {
   
+  # source = "github.com/aws-ia/terraform-aws-eks-blueprints?ref=v4.19.0"
   # source reference changed to the AWS Samples Library EKS blueprints repo that should be publicly available:
   source = "https://github.com/aws-solutions-library-samples/guidance-for-automated-provisioning-of-amazon-elastic-kubernetes-service-using-terraform"
   
-  # source = "github.com/aws-ia/terraform-aws-eks-blueprints?ref=v4.19.0"
   # cluster_name    = local.name
-  # DZ: for unique roles that will be created based on cluster name
+  # DZ: for unique roles that will be created based on cluster name add a suffix
   cluster_name = "${local.name}-dz"
   
   cluster_version = var.eks_cluster_version
