@@ -7,8 +7,7 @@ locals {
 
   tags = {
     Blueprint  = local.name
-    #GithubRepo = "github.com/awslabs/data-on-eks"
-    #DZ: need to update reference to this new GitHub repo location
+    # need to update reference to this new GitHub repo location
     GithubRepo = "github.com/aws-solutions-library-samples/guidance-for-automated-provisioning-of-data-apps-amazon-elastic-kubernetes-service-using-terraform"
   }
 }
