@@ -7,12 +7,13 @@ variable "name" {
 variable "region" {
   description = "region"
   type        = string
-  # DZ: change to us-east-2 has more resources
+  # change to AWS region that has more resources
   default     = "us-east-2"
 }
 
 variable "eks_cluster_version" {
   description = "EKS Cluster version"
+  # change to desired EKS K8S API version
   default     = "1.24"
   type        = string
 }
